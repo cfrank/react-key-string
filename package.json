@@ -1,13 +1,13 @@
 {
   "name": "react-key-string",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A simple utility for generating unique keys for React list items",
   "main": "lib/reactkey.js",
   "scripts": {
     "build": "tsc",
     "test": "tsc;mocha tests/reactkey.test.js --reporter spec"
   },
-  "repository": "https://www.github.com/cfrank/reactkey",
+  "repository": "https://www.github.com/cfrank/react-key-string",
   "author": "Chris Frank <chris@cfrank.org>",
   "license": "BSD-3-Clause",
   "private": false,
