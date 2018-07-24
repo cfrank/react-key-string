@@ -10,8 +10,8 @@ You can control the output and whether or not you need to key to be unique by us
 import key from 'react-key-string'
 
 const MyComponent = ({ myList }) => (
-	myList.map(item => (
-    	<MyListItem key={key.generate()} />
+    myList.map(item => (
+        <MyListItem key={key.generate()} />
     );
 );
 ```
