@@ -1,6 +1,6 @@
 {
   "name": "react-key-string",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A simple utility for generating unique keys for React list items",
   "main": "lib/reactkey.js",
   "scripts": {
