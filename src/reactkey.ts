@@ -15,8 +15,6 @@ class ReactKey {
                 this._usedKeys.push(res);
                 return res;
             }
-
-            continue;
         }
 
         throw new Error(`Could not find a unique ID for React Key after ${this._maxTries} tries`);
