@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "outDir": "lib/",
+  },
+  "files": [
+    "src/reactkey.ts",
+  ],
+}

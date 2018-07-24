@@ -1,0 +1,19 @@
+{
+  "name": "reactkey",
+  "version": "0.1.0",
+  "description": "A simple utility for generating unique keys for React list items",
+  "main": "lib/reactkey.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc;mocha tests/reactkey.test.js --reporter spec"
+  },
+  "repository": "https://www.github.com/cfrank/reactkey",
+  "author": "Chris Frank <chris@cfrank.org>",
+  "license": "BSD-3-Clause",
+  "private": false,
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "typescript": "^2.9.2"
+  }
+}
