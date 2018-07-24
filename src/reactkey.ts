@@ -4,15 +4,15 @@ class ReactKey {
     private _keyLength: number = 4;
     private _maxTries: number = 15;
     private _unique: boolean = false;
-    private _takenKeys: string[] = [];
+    private _usedKeys: string[] = [];
     private _tokens: string = tokens;
 
     private generateUniqueKey(length: number): string {
         for (let i: number = 0; i < this._maxTries; ++i) {
             const res: string = this.generateId(length);
 
-            if (this._takenKeys.includes(res) == false) {
-                this._takenKeys.push(res);
+            if (this._usedKeys.includes(res) == false) {
+                this._usedKeys.push(res);
                 return res;
             }
 
@@ -48,8 +48,8 @@ class ReactKey {
         this._tokens = tokens;
     }
 
-    get takenIds() {
-        return this._takenKeys;
+    get usedKeys() {
+        return this._usedKeys;
     }
 
     public generate(length: number = this.keyLength): string {
@@ -60,8 +60,8 @@ class ReactKey {
         return this.generateId(length);
     }
 
-    public clearTakenKeys() {
-        this._takenKeys = [];
+    public clearUsedKeys() {
+        this._usedKeys = [];
     }
 }
 

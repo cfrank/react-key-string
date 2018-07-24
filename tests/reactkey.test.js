@@ -9,7 +9,7 @@ function resetReactKey() {
     reactkey.unique = false;
     reactkey.tokens = tokens;
 
-    reactkey.clearTakenKeys();
+    reactkey.clearUsedKeys();
 }
 
 describe('reactkey', () => {
@@ -31,7 +31,7 @@ describe('reactkey', () => {
                 reactkey.generate();
             }
 
-            expect(reactkey._takenKeys.length).to.equal(expectedLength);
+            expect(reactkey.usedKeys.length).to.equal(expectedLength);
         });
 
         it('should only return keys if they are unique', () => {
