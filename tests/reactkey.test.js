@@ -71,4 +71,14 @@ describe('reactkey', () => {
             expect(new Set(result).size).to.equal(1);
         });
     });
+
+    describe('keyLength', () => {
+        it('should set the length of the output key', () => {
+            const expectedLength = 14;
+
+            reactkey.keyLength = expectedLength;
+
+            expect(reactkey.generate().length).to.equal(expectedLength);
+        });
+    });
 });
