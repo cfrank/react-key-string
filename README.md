@@ -6,6 +6,24 @@ isn't an obvious id which can be provided with it, this library can generate one
 
 You can control the output and whether or not you need to key to be unique by using the following simple API:
 
+## Install
+
+```bash
+yarn add react-key-string
+
+npm install react-key-string
+```
+
+## Usage
+
+```javascript
+// ES6 Modules
+import key from 'react-key-string';
+
+// CommonJS
+const key = require('react-key-string').default;
+```
+
 ## Simple Example
 
 ```javascript
