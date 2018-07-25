@@ -1,6 +1,8 @@
 # react-key-string
 
-This is a simple utility for generating psuedo-random strings for use in React Keys. The library is tiny, and well tested. It does nothing but generate a string.
+This is a simple utility for generating psuedo-random strings that React can use as a key.
+When you have an endpoint or other object which needs to iterated over in React, but there
+isn't an obvious id which can be provided with it, this library can generate one.
 
 You can control the output and whether or not you need to key to be unique by using the following simple API:
 
@@ -9,10 +11,33 @@ You can control the output and whether or not you need to key to be unique by us
 ```javascript
 import key from 'react-key-string'
 
-const MyComponent = ({ myList }) => (
-    myList.map(item => (
-        <MyListItem key={key.generate()} />
-    );
+app.get('/users/', function(req, res) {
+    const mockUsers = [
+        {
+            first: 'Grace',
+            last: 'Mills',
+            id: key.generate(),
+        },
+        {
+            first: 'Steven',
+            last: 'Nelson',
+            id: key.generate(),
+        },
+    ];
+
+    res.json({
+        users: mockUsers,
+    });
+});
+
+const NameComponent = ({ names }) => (
+    <ul>
+        {names.map(name => (
+            <li key={name.id}>
+                Hello my name is {name.first} {name.last}
+            </li>
+        ))}
+    </ul>
 );
 ```
 

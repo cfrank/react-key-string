@@ -17,7 +17,7 @@ class ReactKey {
             }
         }
 
-        throw new Error(`Could not find a unique ID for React Key after ${this._maxTries} tries`);
+        throw new Error(`Could not find a unique ID after ${this._maxTries} tries`);
     }
 
     private generateId(length: number): string {
