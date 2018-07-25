@@ -29,7 +29,9 @@ app.get('/users/', function(req, res) {
         users: mockUsers,
     });
 });
+```
 
+```javascript
 const NameComponent = ({ names }) => (
     <ul>
         {names.map(name => (
