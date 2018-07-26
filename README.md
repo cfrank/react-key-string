@@ -1,10 +1,10 @@
 # react-key-string
 
-This is a simple utility for generating psuedo-random strings that React can use as a key.
-When you have an endpoint or other object which needs to iterated over in React, but there
+This is a simple utility for generating psuedo-random strings that React can use as keys.
+When you have an endpoint or other object which needs to be iterated over in React, but there
 isn't an obvious id which can be provided with it, this library can generate one.
 
-You can control the output and whether or not you need to key to be unique by using the following simple API:
+You can control the output and whether or not you need the key to be unique by using the following simple API:
 
 ## Install
 
@@ -61,6 +61,16 @@ const NameComponent = ({ names }) => (
 );
 ```
 
+You may also generate `n` number of keys
+
+```javascript
+const keys = key.generateList(10);
+
+console.log(keys.length === 10);
+
+// true
+```
+
 ## API
 
 ```javascript
@@ -111,12 +121,21 @@ key.maxTries = 10;
 ```
 ```javascript
 /*
+ * Check if keys returned are unique
+ *
+ * @get
+ * Returns: boolean
+ */
+const unique: boolean = key.unique;
+```
+```javascript
+/*
  * Get all the used keys from the in-memory array.
  *
  * @get
  * Returns: []string
  */
-const usedKeys: string[] = { key };
+const usedKeys: string[] = key.usedKeys;
 ```
 ```javascript
 /*

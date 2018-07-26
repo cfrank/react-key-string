@@ -20,13 +20,13 @@ class ReactKey {
         throw new Error(`Could not find a unique ID after ${this._maxTries} tries`);
     }
 
-    private generateId(length: number): string {
+    private generateId(keyLength: number): string {
         let text: string = '';
 
-        for(let i: number = 0; i < this._keyLength; ++i) {
-            text += this._tokens.charAt(Math.floor(Math.random() * this._tokens.length));
+        for(let i: number = 0; i < keyLength; ++i) {
+            text += this._tokens.charAt(Math.floor(Math.random() * keyLength));
         }
-
+        
         return text;
     }
 
@@ -46,16 +46,30 @@ class ReactKey {
         this._tokens = tokens;
     }
 
+    get unique() {
+        return this._unique;
+    }
+
     get usedKeys() {
         return this._usedKeys;
     }
 
-    public generate(length: number = this.keyLength): string {
-        if (this._unique) {
+    public generate(length: number = this._keyLength): string {
+        if (this.unique) {
             return this.generateUniqueKey(length);
         }
 
         return this.generateId(length);
+    }
+
+    public generateList(listLength: number, keyLength: number = this._keyLength): string[] {
+        const keyList: string[] = [];
+
+        for (let i: number = 0; i < listLength; ++i) {
+            keyList.push(this.generate(keyLength));
+        }
+
+        return keyList;
     }
 
     public clearUsedKeys() {
