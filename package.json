@@ -1,6 +1,6 @@
 {
   "name": "react-key-string",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "A simple utility for generating psuedo random keys which react can use when rendering a list",
   "main": "lib/reactkey.js",
   "scripts": {
