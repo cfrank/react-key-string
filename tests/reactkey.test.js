@@ -7,7 +7,7 @@ function resetReactKey() {
     reactkey.keyLength = 4;
     reactkey.maxTries = 15;
     reactkey.unique = false;
-    reactkey.tokens = tokens;
+    reactkey.tokens = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-';
 
     reactkey.clearUsedKeys();
 }
