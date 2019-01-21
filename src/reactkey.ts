@@ -1,11 +1,9 @@
-export const tokens: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-';
-
 class ReactKey {
     private _keyLength: number = 4;
     private _maxTries: number = 15;
     private _unique: boolean = false;
     private _usedKeys: string[] = [];
-    private _tokens: string = tokens;
+    private _tokens: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-';
 
     private generateUniqueKey(length: number): string {
         for (let i: number = 0; i < this._maxTries; ++i) {
@@ -30,27 +28,27 @@ class ReactKey {
         return text;
     }
 
-    set keyLength(length: number) {
+    public set keyLength(length: number) {
         this._keyLength = length;
     }
 
-    set maxTries(maxTries: number) {
+    public set maxTries(maxTries: number) {
         this._maxTries = maxTries;
     }
 
-    set unique(unique: boolean) {
+    public set unique(unique: boolean) {
         this._unique = unique;
     }
 
-    set tokens(tokens: string) {
+    public set tokens(tokens: string) {
         this._tokens = tokens;
     }
 
-    get unique() {
+    public get unique(): boolean {
         return this._unique;
     }
 
-    get usedKeys() {
+    public get usedKeys(): string[] {
         return this._usedKeys;
     }
 
@@ -62,7 +60,7 @@ class ReactKey {
         return this.generateId(length);
     }
 
-    public generateList(listLength: number, keyLength: number = this._keyLength): string[] {
+    public generateList(listLength: number, keyLength: number): string[] {
         const keyList: string[] = [];
 
         for (let i: number = 0; i < listLength; ++i) {
