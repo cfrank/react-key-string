@@ -1,7 +1,6 @@
 'use strict';
 const expect = require('chai').expect;
 const reactkey = require('../lib/reactkey').default;
-const tokens = require('../lib/reactkey').tokens;
 
 function resetReactKey() {
     reactkey.keyLength = 4;

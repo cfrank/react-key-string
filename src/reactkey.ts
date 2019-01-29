@@ -22,7 +22,7 @@ class ReactKey {
         let text: string = '';
 
         for(let i: number = 0; i < keyLength; ++i) {
-            text += this._tokens.charAt(Math.floor(Math.random() * keyLength));
+            text += this._tokens.charAt(Math.floor(Math.random() * this._tokens.length));
         }
         
         return text;
