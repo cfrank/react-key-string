@@ -96,7 +96,7 @@ key.length = 4;
  * @set
  * Defaults to: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-"
  */
-key.length = 'abcde123';
+key.tokens = 'abcde123';
 ```
 ```javascript
 /*
