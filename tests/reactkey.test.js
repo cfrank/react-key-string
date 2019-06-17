@@ -3,7 +3,7 @@ const expect = require('chai').expect;
 const reactkey = require('../lib/reactkey').default;
 
 function resetReactKey() {
-    reactkey.keyLength = 4;
+    reactkey.keyLength = 6;
     reactkey.maxTries = 15;
     reactkey.unique = false;
     reactkey.tokens = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-';
