@@ -1,5 +1,5 @@
 class ReactKey {
-    private _keyLength: number = 4;
+    private _keyLength: number = 6;
     private _maxTries: number = 15;
     private _unique: boolean = false;
     private _usedKeys: string[] = [];

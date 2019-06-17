@@ -85,9 +85,9 @@ import key from 'react-key-string';
  * Change the length of the key
  *
  * @set
- * Defaults to: 4
+ * Defaults to: 6
  */
-key.length = 4;
+key.length = 6;
 ```
 ```javascript
 /*
